@@ -1,0 +1,17 @@
+<p>
+    Student Details
+</p>
+<ul class='list-group' *ngIf="studentDetails">
+    <li class='list-group-item'>
+        Name: {{studentDetails.first_name}}  {{studentDetails.last_name}}
+    </li>
+    <li class='list-group-item' style="cursor: pointer;" (click)='getAddress(studentDetails.address)'>
+        Address: {{studentDetails.address}}
+    </li>
+   <li class='list-group-item'>
+         Email: {{studentDetails.email}}
+    </li>
+    <li class='list-group-item'>
+        Gender: {{studentDetails.gender}}
+   </li>
+</ul>

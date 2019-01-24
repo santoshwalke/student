@@ -1,0 +1,30 @@
+<div class='row'>
+    <div class="col-md-12">
+        <button class="btn btn-success btn-sm" (click)='addStudent()'>
+            Add Student
+        </button>
+        <button class="btn btn-danger btn-sm" (click)='logOut()'>
+            logOut
+        </button>
+        <hr>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <p>
+            Student List
+        </p>
+        <a
+        *ngFor="let studentList of studentData; let i = index"
+        class="list-group-item"
+        style="cursor: pointer"
+        (click)='onStudentSelected(i)'
+        >
+            {{studentList.first_name}} {{studentList.last_name}}
+        </a>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <app-student-details></app-student-details>
+    </div>
+    <div class="col-md-4 col-sm-6">
+        <app-student-address></app-student-address>
+    </div>
+</div>
